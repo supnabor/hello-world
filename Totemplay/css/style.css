@@ -42,7 +42,7 @@ body {
   /*container*/
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1160px;
     margin: 0 auto;
 }
 
@@ -86,8 +86,9 @@ body {
 /*intro*/
 .intro {
   background-image: url(../images/introback.svg);
-  background-size: cover;
-  
+  height: 1100px;
+  background-repeat: no-repeat;
+  margin-bottom: 119px;
 }
 
 .intro-inner {
@@ -101,7 +102,7 @@ body {
 }
 
 .intro-text {
-  padding-left: 36px;
+  padding-left: 35px;
   margin-bottom: 62px;
   color: #ffffff;
   font-size: 100px;
@@ -110,7 +111,7 @@ body {
 }
 
 .intro-list {
-  padding-left: 36px;
+  padding-left: 35px;
   color: #ffffff;
   font-size: 30px;
   line-height: 36px; 
@@ -139,7 +140,7 @@ body {
 
 .intro-btn {
   display: inline-block;
-  margin-left: 36px;
+  margin-left: 35px;
   padding: 17px 74px;
   background: #fff;
   border-radius: 10px;
@@ -156,6 +157,104 @@ body {
   background-color: #FF7C2E;
   color: #fff;
 }
+
+/*info*/
+.info {
+  
+}
+
+.info-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.info-left {
+  flex:0 1 auto;
+  width: 615px;
+  height: 540px;
+}
+
+.info-text {
+  font-size: 30px;
+  line-height: 150%;
+}
+
+.info-text span {
+  color: #0070DA;
+  font-weight: 700;
+}
+
+.info-text p {
+  margin-bottom: 50px;
+}
+
+.info-img {
+  color:greenyellow;
+  position: relative;
+}
+
+.info-logo {
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/*about*/
+.about {
+  background-image: url(../images/about.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-inner {
+
+}
+
+.about-header {
+  width: 100%;
+  max-width: 740px;
+  padding-top: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #FF7C2E;
+  margin-bottom: 40px;
+}
+
+.about-suptitle {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 150%;
+}
+
+.about-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-left {
+  padding-top: 117px;
+  
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #FF7C2E;
+}
+
+
 
 
 
