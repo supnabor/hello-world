@@ -1,0 +1,74 @@
+.intro {
+  background-image: url(../images/introback.svg);
+  background-repeat: no-repeat;
+  height: 1100px;
+  width: 100%;
+  margin-bottom: 119px;
+}
+
+.intro-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro-left {
+  display: inline-block;
+  margin-right: 75px;
+}
+
+.intro-text {
+  padding-left: 35px;
+  margin-bottom: 62px;
+  color: #ffffff;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.intro-list {
+  padding-left: 35px;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 36px;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.list-item {
+  position: relative;
+  padding-left: 67px;
+  margin-bottom: 30px;
+  padding-top: 6px;
+}
+
+.list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 49px;
+  height: 49px;
+  background-image: url(../images/introlist.svg);
+  background-repeat: no-repeat;
+  background-size: initial;
+}
+
+.intro-btn {
+  display: inline-block;
+  margin-left: 35px;
+  padding: 17px 74px;
+  background: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: $color-orange;
+  text-decoration: none;
+  transition: color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.intro-btn:hover {
+  background-color: $color-orange;
+  color: #fff;
+}
