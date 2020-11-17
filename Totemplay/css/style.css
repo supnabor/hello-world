@@ -86,7 +86,7 @@ body {
 .intro {
   background-image: url(../images/introback.svg);
   background-repeat: no-repeat;
-  background-position: 0 -130px ;
+  background-position: center bottom;
   background-size: cover;
   height: 920px;
   width: 100%;
