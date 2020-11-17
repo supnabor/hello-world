@@ -49,11 +49,10 @@ body {
   /*header*/
 .header {
     background-color: #66B5FF;
-    
     background-image: url(../images/headerback.svg);
     background-size: cover;
     max-height: 100%;
-    height: 181px;
+    height: 180px;
 }
 
 .header-inner {
@@ -87,9 +86,11 @@ body {
 .intro {
   background-image: url(../images/introback.svg);
   background-repeat: no-repeat;
-  height: 1100px;
+  background-position: 0 -130px ;
+  background-size: cover;
+  height: 920px;
   width: 100%;
-  margin-bottom: 119px;
+  
 }
 
 .intro-inner {
@@ -168,7 +169,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  padding-top: 118px;
 }
 
 .info-left {
@@ -205,9 +206,11 @@ body {
 
 /*about*/
 .about {
-  background-image: url(../images/about.svg);
+  width: 100%;
+  height: 1440px;
+  background-image: url(../images/aboutback.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position-y: -280px;
 }
 
 .about-inner {
@@ -279,17 +282,20 @@ h3 {
 
 /*section text*/
 .section-text {
-
+  width: 100%;
+  height: 868px;
+  background-image: url(../images/textback1.png), url(../images/textback2.png);
 }
 
 .text-inner {
   margin: 0 auto;
+  padding-top: 290px;
   width: 100%;
   width: 681px;
   font-size: 30px;
   line-height: 150%;
   text-align: center;
-  margin-bottom: 438px;
+  
 }
 
 .text-inner span {
@@ -300,6 +306,7 @@ h3 {
 /*salary*/
 .salary {
   width: 100%;
+  height: 985px;
   background-image: url(../images/salary.jpg);
 }
 
@@ -331,19 +338,71 @@ h3 {
 .salary-col {
   flex: 1 1 auto;
   width: 400px;
-  height: ;
+  height: 289px;
   align-items: center;
   text-align: center;
+  border-right: 3px solid rgba(0, 112, 218, 0.5);
+}
+
+.salary-col:last-child {
+  border-right: none;
 }
 
 .salary-exp {
   font-size: 30px;
   line-height: 36px;
-  padding: 50px 83px 40px;
+  padding: 50px 0 40px;
+  border-bottom: 3px solid rgba(0, 112, 218, 0.5);
 }
 
 .salary-sum {
+  font-size: 40px;
+  line-height: 120%;
+  padding-top: 29px;
+  color: #E34E1A;
+}
 
+/*subscribe*/
+.subscribe {
+  margin-top: 165px;
+  width: 100%;
+  height: 1155px;
+  background-image: url(../images/subscribeback.svg);
+  background-position: 0 -240px;
+}
+
+.subscribe-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscribe-text {
+  width: 553px;
+  padding-top: 379px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.subscribe-image {
+  animation-name: subscribe-image;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes subscribe-image {
+  0% {
+    left:0;
+  }
+  100% {
+    left: 500px;
+  }
+}
+
+.subscribe-form {
+  padding-top: 151px;
 }
 
 
