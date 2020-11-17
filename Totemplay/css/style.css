@@ -51,6 +51,7 @@ body {
     background-color: #66B5FF;
     background-image: url(../images/headerback.svg);
     background-size: cover;
+    background-position: bottom;
     max-height: 100%;
     height: 180px;
 }
