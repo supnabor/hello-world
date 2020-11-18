@@ -541,25 +541,58 @@ h3 {
   color: #FF7C2E;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .accordion-item {
-  position: relative;
+  /*position: relative;*/
+  margin-bottom: 10px;
 }
 
-.accordion-item-input {
+/*.accordion-item-input {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-}
+}*/
 
 .accordion-item-trigger {
-  display: block;
+  /*display: block;*/
+  background: #66B5FF;
+  padding: 40px 0 41px 36px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  cursor: pointer;
+  position: relative;
+}
 
+.accordion-item-trigger::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #FF7C2E;
+  border-radius: 50%;
+  top: 50%;
+  right: 49px;
+  transform: translateY(-50%);
 }
 
 .accordion-item-content {
+  background: #66B5FF;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%;  
+  color: #FFFFFF;
+  padding: 0 192px 30px 36px;
+  display: none;
+}
+
+/*.accordion-item-input:checked ~ .accordion-item-content {
+  display: block;*/
 
 }
 
