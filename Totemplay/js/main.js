@@ -1,5 +1,9 @@
-$(document).ready(function() {
+function initAccordion() {
     $('.accordion-item-trigger').click(function(){
-        $(this).next('.accordion-item-content').slideToggle();
+        $(this).parent().toggleClass('is-active');
     });
+}
+
+$(document).ready(function() {
+    initAccordion();
 });

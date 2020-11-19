@@ -547,19 +547,12 @@ h3 {
 .accordion-item {
   /*position: relative;*/
   margin-bottom: 10px;
-}
-
-/*.accordion-item-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}*/
-
-.accordion-item-trigger {
-  /*display: block;*/
   background: #66B5FF;
   padding: 40px 0 41px 36px;
+}
+
+.accordion-item-trigger {
+  background: #66B5FF;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 24px;
@@ -568,12 +561,12 @@ h3 {
   position: relative;
 }
 
-.accordion-item-trigger::before {
+.accordion-item-trigger-icon {
   content: "";
   display: block;
   position: absolute;
-  width: 40px;
-  height: 40px;
+  /* width: 40px;
+  height: 40px; */
   background-color: #FF7C2E;
   border-radius: 50%;
   top: 50%;
@@ -585,16 +578,80 @@ h3 {
   background: #66B5FF;
   font-weight: normal;
   font-size: 20px;
-  line-height: 150%;  
+  line-height: 150%;
   color: #FFFFFF;
-  padding: 0 192px 30px 36px;
-  display: none;
+  margin-top: 0;
+
+  /* NOTE: Animation */
+  /* Go read: https://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css */
+  transition: all 300ms ease-in-out;
+  max-height: 0;
+  opacity: 0;
 }
 
-/*.accordion-item-input:checked ~ .accordion-item-content {
-  display: block;*/
-
+.accordion-item.is-active .accordion-item-content {
+  /* NOTE: Animation */
+  max-height: 999px;
+  opacity: 1;
+  margin-top: 20px;
 }
+
+/* Animation: Plus / Minus */
+.closed .vertical {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-90deg);
+}
+.closed .horizontal {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-90deg);
+  opacity: 1;
+}
+
+.is-active {
+  opacity: 1;
+}
+.is-active .vertical {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(90deg);
+}
+.is-active .horizontal {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.circle-plus .circle {
+  position: relative;
+  width: 2.55em;
+  height: 2.5em;
+  border-radius: 100%;
+  /* border: solid .5em #DFDAD7; */
+}
+
+.circle-plus .circle .horizontal {
+  position: absolute;
+  background-color: #fff;
+  width: 30px;
+  height: 5px;
+  left: 50%;
+  margin-left: -15px;
+  top: 50%;
+  margin-top: -2.5px;
+}
+
+.circle-plus .circle .vertical {
+  position: absolute;
+  background-color: #fff;
+  width: 5px;
+  height: 30px;
+  left: 50%;
+  margin-left: -2.5px;
+  top: 50%;
+  margin-top: -15px;
+}
+
+/* END - Animation: Plus / Minus */
+
 
 
 
