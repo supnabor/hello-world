@@ -366,9 +366,11 @@ h3 {
 .subscribe {
   margin-top: 165px;
   width: 100%;
-  height: 1155px;
+  height: 1175px;
   background-image: url(../images/subscribeback.svg);
   background-position: 0 -240px;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .subscribe-content {
@@ -392,18 +394,17 @@ h3 {
 .subscribe-anim {
  position: absolute;
  animation-name: subscribe-anim;
- animation-duration: 10s;
+ animation-duration: 7s;
  animation-iteration-count: infinite;
  animation-direction: alternate;
-
 }
 
 @keyframes subscribe-anim {
   0% {
-    left: 0;
+    transform: translate3d(-50px, 20px, 0);
   }
   100% {
-    left: 200px;
+    transform: translate3d(50px, -20px, 100px);
   }
 }
 
@@ -440,11 +441,13 @@ h3 {
 /*modules*/
 .modules {
   width: 100%;
-  height: 1000px;
+  min-height: 1320px;
+  padding-top: 230px;
+  margin-top: -286px;
   background-image: url(../images/modulesback.svg);
   background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
+  background-position: center top;
+  background-size: 100% 100%;
 }
 
 .modules-header {
@@ -545,7 +548,6 @@ h3 {
 }
 
 .accordion-item {
-  /*position: relative;*/
   margin-bottom: 10px;
   background: #66B5FF;
   padding: 40px 0 41px 36px;
@@ -565,8 +567,6 @@ h3 {
   content: "";
   display: block;
   position: absolute;
-  /* width: 40px;
-  height: 40px; */
   background-color: #FF7C2E;
   border-radius: 50%;
   top: 50%;
@@ -625,7 +625,6 @@ h3 {
   width: 2.55em;
   height: 2.5em;
   border-radius: 100%;
-  /* border: solid .5em #DFDAD7; */
 }
 
 .circle-plus .circle .horizontal {
