@@ -16,7 +16,8 @@
 
 .intro-left {
   display: inline-block;
-  margin-right: 75px;
+  width: 100%;
+ 
 }
 
 .intro-text {
@@ -74,4 +75,15 @@
 .intro-btn:hover {
   background-color: #FF7C2E;
   color: #fff;
+}
+
+.intro-right {
+  width: 100%;
+  position: relative;
+}
+
+.intro-img {
+  position: absolute;
+  right: 0;
+  
 }
