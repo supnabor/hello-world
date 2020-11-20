@@ -47,7 +47,7 @@ body {
 }
 
   /*header*/
-.header {
+.header { 
     background-color: #66B5FF;
     background-image: url(../images/headerback.svg);
     background-size: cover;

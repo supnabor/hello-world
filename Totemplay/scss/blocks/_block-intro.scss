@@ -1,9 +1,12 @@
+/*intro*/
 .intro {
   background-image: url(../images/introback.svg);
   background-repeat: no-repeat;
-  height: 1100px;
+  background-position: center bottom;
+  background-size: cover;
+  height: 920px;
   width: 100%;
-  margin-bottom: 119px;
+
 }
 
 .intro-inner {
@@ -62,13 +65,13 @@
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  color: $color-orange;
+  color: #FF7C2E;
   text-decoration: none;
   transition: color 0.2s linear;
   transition: background-color 0.2s linear;
 }
 
 .intro-btn:hover {
-  background-color: $color-orange;
+  background-color: #FF7C2E;
   color: #fff;
 }
