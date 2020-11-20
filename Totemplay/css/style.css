@@ -2,13 +2,13 @@ body {
     margin: 0;
     font-family: 'MuseoSansCyrl';
   }
-  
+
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
-  
+
   h1,
   h2,
   h3,
@@ -17,7 +17,7 @@ body {
   h6 {
     margin: 0;
   }
-  
+
   p {
     margin: 0 0 10px;
   }
@@ -37,7 +37,7 @@ body {
     font-weight: 700;
     font-style: normal;
   }
-  
+
 
   /*container*/
 .container {
@@ -59,12 +59,12 @@ body {
 .header-inner {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .header-logo {
     margin-top: 25px;
-    
+
 }
 
 .header-nav {
@@ -91,7 +91,7 @@ body {
   background-size: cover;
   height: 920px;
   width: 100%;
-  
+
 }
 
 .intro-inner {
@@ -117,7 +117,7 @@ body {
   padding-left: 35px;
   color: #ffffff;
   font-size: 30px;
-  line-height: 36px; 
+  line-height: 36px;
   position: relative;
   margin-bottom: 80px;
 }
@@ -163,7 +163,7 @@ body {
 
 /*info*/
 .info {
-  
+
 }
 
 .info-inner {
@@ -244,7 +244,7 @@ body {
 .about-columns {
   display: flex;
   justify-content: space-between;
-  
+
 }
 
 .about-left {
@@ -375,7 +375,7 @@ h3 {
 
 .subscribe-content {
   display: flex;
-  
+
 }
 
 .subscribe-text {
@@ -645,7 +645,22 @@ h3 {
 
 /* END - Animation: Plus / Minus */
 
+/* Progress bar */
+.progress-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
 
+.progress-bar {
+  height: 5px;
+  background: #FF7C2E;
+  width: 0%;
+}
+
+/* END - Progress bar */
 
 
 
