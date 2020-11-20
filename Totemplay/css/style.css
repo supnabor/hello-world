@@ -840,24 +840,56 @@ h3 {
 
 /*footer*/
 .footer {
-  background-image: url(../images/footerback1.svg);
+  background-image: url(../images/footerback2.svg) , url(../images/footerback1.svg);
 }
 
 .footer-inner {
-  display: block;
-  margin: 0 auto;
+  padding-top: 498px;
 }
 
 .footer-logo {
+  width: 100%;
+  text-align: center;
   margin-bottom: 92px;
 }
 
 .footer-contacts {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 59px;
 }
 
+.footer-contacts a {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
 
+.footer-icons {
+  width: 100%;
+  max-width: 213px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.footer-icons-link {
+  width: 55px;
+  height: 55px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  color: #0070DA; 
+  font-size: 30px;
+  text-decoration: none;
+padding-top: 13px;
+  text-align: center;
+}
 
 
 
