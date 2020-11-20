@@ -2,13 +2,13 @@ body {
     margin: 0;
     font-family: 'MuseoSansCyrl';
   }
-  
+
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
-  
+
   h1,
   h2,
   h3,
@@ -17,7 +17,7 @@ body {
   h6 {
     margin: 0;
   }
-  
+
   p {
     margin: 0 0 10px;
   }
@@ -37,7 +37,7 @@ body {
     font-weight: 700;
     font-style: normal;
   }
-  
+
 
   /*container*/
 .container {
@@ -59,12 +59,12 @@ body {
 .header-inner {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .header-logo {
     margin-top: 25px;
-    
+
 }
 
 .header-nav {
@@ -83,6 +83,22 @@ body {
     text-decoration: none;
 }
 
+/* Progress bar */
+.progress-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.progress-bar {
+  height: 5px;
+  background: #FF7C2E;
+  width: 0%;
+}
+/* END - Progress bar */
+
 /*intro*/
 .intro {
   background-image: url(../images/introback.svg);
@@ -91,7 +107,7 @@ body {
   background-size: cover;
   height: 920px;
   width: 100%;
-  
+
 }
 
 .intro-inner {
@@ -117,7 +133,7 @@ body {
   padding-left: 35px;
   color: #ffffff;
   font-size: 30px;
-  line-height: 36px; 
+  line-height: 36px;
   position: relative;
   margin-bottom: 80px;
 }
@@ -163,7 +179,7 @@ body {
 
 /*info*/
 .info {
-  
+
 }
 
 .info-inner {
@@ -244,7 +260,7 @@ body {
 .about-columns {
   display: flex;
   justify-content: space-between;
-  
+
 }
 
 .about-left {
@@ -473,14 +489,16 @@ h3 {
 .subscribe {
   margin-top: 165px;
   width: 100%;
-  height: 1155px;
+  height: 1175px;
   background-image: url(../images/subscribeback.svg);
   background-position: 0 -240px;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .subscribe-content {
   display: flex;
-  
+
 }
 
 .subscribe-text {
@@ -499,18 +517,17 @@ h3 {
 .subscribe-anim {
  position: absolute;
  animation-name: subscribe-anim;
- animation-duration: 10s;
+ animation-duration: 7s;
  animation-iteration-count: infinite;
  animation-direction: alternate;
-
 }
 
 @keyframes subscribe-anim {
   0% {
-    left: 0;
+    transform: translate3d(-50px, 20px, 0);
   }
   100% {
-    left: 200px;
+    transform: translate3d(50px, -20px, 100px);
   }
 }
 
@@ -547,11 +564,13 @@ h3 {
 /*modules*/
 .modules {
   width: 100%;
-  height: 1000px;
+  min-height: 1320px;
+  padding-top: 230px;
+  margin-top: -286px;
   background-image: url(../images/modulesback.svg);
   background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
+  background-position: center top;
+  background-size: 100% 100%;
 }
 
 .modules-header {
@@ -653,10 +672,9 @@ h3 {
 }
 
 .accordion-item {
-  /*position: relative;*/
   margin-bottom: 10px;
   background: #66B5FF;
-  padding: 40px 0 41px 36px;
+  padding: 40px 40px 40px 36px;
 }
 
 .accordion-item-trigger {
@@ -673,35 +691,27 @@ h3 {
   content: "";
   display: block;
   position: absolute;
-  /* width: 40px;
-  height: 40px; */
   background-color: #FF7C2E;
   border-radius: 50%;
   top: 50%;
-  right: 49px;
+  right: 0;
   transform: translateY(-50%);
 }
 
 .accordion-item-content {
-  background: #66B5FF;
   font-weight: normal;
   font-size: 20px;
   line-height: 150%;
   color: #FFFFFF;
-  margin-top: 0;
 
-  /* NOTE: Animation */
-  /* Go read: https://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css */
-  transition: all 300ms ease-in-out;
+  transition: all 600ms ease-in-out;
   max-height: 0;
   opacity: 0;
 }
 
 .accordion-item.is-active .accordion-item-content {
-  /* NOTE: Animation */
-  max-height: 999px;
+  max-height: 500px;
   opacity: 1;
-  margin-top: 20px;
 }
 
 /* Animation: Plus / Minus */
@@ -733,7 +743,6 @@ h3 {
   width: 2.55em;
   height: 2.5em;
   border-radius: 100%;
-  /* border: solid .5em #DFDAD7; */
 }
 
 .circle-plus .circle .horizontal {
@@ -757,7 +766,6 @@ h3 {
   top: 50%;
   margin-top: -15px;
 }
-
 /* END - Animation: Plus / Minus */
 
 /*education*/
@@ -770,7 +778,7 @@ h3 {
 
 .education-inner {
 
-}
+} 
 
 .education-header {
   padding-top: 150px;
