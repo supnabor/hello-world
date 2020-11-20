@@ -38,6 +38,10 @@ const paths = {
   favicon: {
     src: './favicon.ico',
     dest: './dist'
+  },
+  fonts: {
+    src: './fonts/*',
+    dest: './dist/fonts'
   }
 };
 
@@ -119,32 +123,48 @@ const images = () =>
     .pipe(gulp.dest(paths.images.dest));
 
 // Copy the favicon
-// const favicon = () =>
-//   gulp
-//     .src(paths.favicon.src)
-//     .pipe(plumber())
-//     .pipe(gulp.dest(paths.favicon.dest));
+const favicon = () =>
+  gulp
+    .src(paths.favicon.src, { allowEmpty: true })
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.favicon.dest));
+
+// Copies all fonts
+const fonts = () =>
+  gulp
+    .src(paths.fonts.src)
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.fonts.dest));
 
 // Watches all .scss, .js and .html changes and executes the corresponding task
 function watchFiles() {
   browserSync.init({
     server: {
-      baseDir: './'
+      baseDir: './dist/'
     },
     notify: false
   });
 
-  gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.html.src, html).on('change', browserSync.reload);
+  gulp.watch(paths.styles.src, styles).on('change', browserSync.reload);
   gulp.watch(paths.vendors.src, vendors).on('change', browserSync.reload);
-  // gulp.watch(paths.favicon.src, favicon).on('change', browserSync.reload);
+  gulp.watch(paths.favicon.src, favicon).on('change', browserSync.reload);
   gulp.watch(paths.scripts.src, scripts).on('change', browserSync.reload);
   gulp.watch(paths.images.src, images).on('change', browserSync.reload);
-  gulp.watch('./*.html', html).on('change', browserSync.reload);
+  gulp.watch(paths.fonts.src, fonts).on('change', browserSync.reload);
+
 }
 
 const build = gulp.series(
   clean,
-  gulp.parallel(styles, vendors, scripts, images),
+  gulp.parallel(
+    styles,
+    vendors,
+    scripts,
+    images,
+    fonts,
+    favicon
+  ),
   cacheBust
 );
 
@@ -155,7 +175,8 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.vendors = vendors;
 exports.images = images;
-// exports.favicon = favicon;
+exports.fonts = fonts;
+exports.favicon = favicon;
 exports.watch = watch;
 exports.build = build;
 exports.default = build;
