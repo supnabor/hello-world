@@ -778,7 +778,7 @@ h3 {
 
 .education-inner {
 
-} 
+}
 
 .education-header {
   padding-top: 150px;
@@ -840,7 +840,10 @@ h3 {
 
 /*footer*/
 .footer {
-  background-image: url(../images/footerback2.svg) , url(../images/footerback1.svg);
+  background-image: url(../images/footerback2.svg), url(../images/footerback1.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .footer-inner {
@@ -876,7 +879,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-icons-link {
@@ -884,13 +887,30 @@ h3 {
   height: 55px;
   background-color: #FFFFFF;
   border-radius: 50%;
-  color: #0070DA; 
+  color: #0070DA;
   font-size: 30px;
   text-decoration: none;
-padding-top: 13px;
+  padding-top: 13px;
   text-align: center;
 }
 
+.widget-scroll-top {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s linear;
+}
+
+.widget-scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
 
 
 
