@@ -18,12 +18,6 @@ function checkProgress() {
 $(document).ready(function() {
     initAccordion();
     checkProgress();
-
-    widgetScrollTop.addEventListener('click', function(event) {
-        event.preventDefault();
-
-        $("html, body").animate({ scrollTop: 0}, 300);
-    });
 });
 
 document.addEventListener('scroll', function() {
@@ -34,4 +28,10 @@ document.addEventListener('scroll', function() {
     } else {
         $(widgetScrollTop).removeClass('is-visible');
     }
+});
+
+widgetScrollTop.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    $("html, body").animate({ scrollTop: 0}, 300);
 });
