@@ -1,0 +1,43 @@
+/*info*/
+.info {
+
+}
+
+.info-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 118px;
+}
+
+.info-left {
+  flex:0 1 auto;
+  width: 615px;
+  height: 540px;
+}
+
+.info-text {
+  font-size: 30px;
+  line-height: 150%;
+}
+
+.info-text span {
+  color: #0070DA;
+  font-weight: 700;
+}
+
+.info-text p {
+  margin-bottom: 50px;
+}
+
+.info-img {
+  color:greenyellow;
+  position: relative;
+}
+
+.info-logo {
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

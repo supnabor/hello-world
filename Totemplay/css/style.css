@@ -773,6 +773,8 @@ h3 {
   width: 100%;
   height: 892px;
   background-image: url(../images/educationback.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   margin-bottom: 106px;
 }
 

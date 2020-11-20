@@ -1,0 +1,72 @@
+/*education*/
+.education {
+    width: 100%;
+    height: 892px;
+    background-image: url(../images/educationback.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 106px;
+  }
+  
+  .education-inner {
+  
+  }
+  
+  .education-header {
+    padding-top: 150px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 91px;
+  }
+  
+  .education-title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 55px;
+  }
+  
+  .education-subtitle {
+    display: inline-block;
+    width: 100%;
+    max-width: 547px;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 120%;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  
+  .education-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .education-input input {
+    width: 760px;
+    height: 50px;
+    border: 3px solid #FFFFFF;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: #FF7C2E;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 30px;
+    margin-bottom: 27px;
+  }
+  
+  .education-button button {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF;
+    background: #0070DA;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 14px 285px;
+  }
+  
