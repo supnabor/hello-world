@@ -1,0 +1,114 @@
+/*faq*/
+.faq {
+    margin-bottom: 176px;
+  
+  }
+  
+  .faq-header {
+    padding-top: 86px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FF7C2E;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  
+  .accordion-item {
+    margin-bottom: 10px;
+    background: #66B5FF;
+    padding: 40px 40px 40px 36px;
+  }
+  
+  .accordion-item-trigger {
+    background: #66B5FF;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .accordion-item-trigger-icon {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #FF7C2E;
+    border-radius: 50%;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  
+  .accordion-item-content {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    color: #FFFFFF;
+  
+    transition: all 600ms ease-in-out;
+    max-height: 0;
+    opacity: 0;
+  }
+  
+  .accordion-item.is-active .accordion-item-content {
+    max-height: 500px;
+    opacity: 1;
+  }
+  
+  /* Animation: Plus / Minus */
+  .closed .vertical {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+  }
+  .closed .horizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+    opacity: 1;
+  }
+  
+  .is-active {
+    opacity: 1;
+  }
+  .is-active .vertical {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+  }
+  .is-active .horizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+  
+  .circle-plus .circle {
+    position: relative;
+    width: 2.55em;
+    height: 2.5em;
+    border-radius: 100%;
+  }
+  
+  .circle-plus .circle .horizontal {
+    position: absolute;
+    background-color: #fff;
+    width: 30px;
+    height: 5px;
+    left: 50%;
+    margin-left: -15px;
+    top: 50%;
+    margin-top: -2.5px;
+  }
+  
+  .circle-plus .circle .vertical {
+    position: absolute;
+    background-color: #fff;
+    width: 5px;
+    height: 30px;
+    left: 50%;
+    margin-left: -2.5px;
+    top: 50%;
+    margin-top: -15px;
+  }
+  /* END - Animation: Plus / Minus */

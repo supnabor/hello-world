@@ -1,3 +1,5 @@
+var widgetScrollTop = document.querySelector('.widget-scroll-top');
+
 function initAccordion() {
     $('.accordion-item-trigger').click(function(){
         $(this).parent().toggleClass('is-active');
@@ -12,6 +14,7 @@ function checkProgress() {
     progressBar.style.width = progress + "%";
 }
 
+
 $(document).ready(function() {
     initAccordion();
     checkProgress();
@@ -19,4 +22,16 @@ $(document).ready(function() {
 
 document.addEventListener('scroll', function() {
     checkProgress();
+
+    if (window.pageYOffset > 1250) {
+        $(widgetScrollTop).addClass('is-visible');
+    } else {
+        $(widgetScrollTop).removeClass('is-visible');
+    }
+});
+
+widgetScrollTop.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    $("html, body").animate({ scrollTop: 0}, 300);
 });
