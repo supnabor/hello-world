@@ -16,7 +16,7 @@ const plumber = require('gulp-plumber');
 
 const paths = {
   html: {
-    src: './**/*.html',
+    src: './index.html',
     dest: './dist'
   },
   styles: {
@@ -146,11 +146,8 @@ function watchFiles() {
 
   gulp.watch(paths.html.src, html).on('change', browserSync.reload);
   gulp.watch(paths.styles.src, styles).on('change', browserSync.reload);
-  gulp.watch(paths.vendors.src, vendors).on('change', browserSync.reload);
-  gulp.watch(paths.favicon.src, favicon).on('change', browserSync.reload);
   gulp.watch(paths.scripts.src, scripts).on('change', browserSync.reload);
   gulp.watch(paths.images.src, images).on('change', browserSync.reload);
-  gulp.watch(paths.fonts.src, fonts).on('change', browserSync.reload);
 
 }
 
