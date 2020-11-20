@@ -28,5 +28,8 @@
   "scripts": {
     "build": "gulp build",
     "start": "gulp watch"
+  },
+  "dependencies": {
+    "include-media": "^1.4.9"
   }
 }
