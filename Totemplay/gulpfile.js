@@ -40,7 +40,7 @@ const paths = {
     dest: './dist'
   },
   fonts: {
-    src: './fonts/*',
+    src: './fonts/**/*.{ttf,woff,eot,svg}',
     dest: './dist/fonts'
   }
 };
@@ -133,7 +133,6 @@ const favicon = () =>
 const fonts = () =>
   gulp
     .src(paths.fonts.src)
-    .pipe(plumber())
     .pipe(gulp.dest(paths.fonts.dest));
 
 // Watches all .scss, .js and .html changes and executes the corresponding task
