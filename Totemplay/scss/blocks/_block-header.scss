@@ -1,128 +1,116 @@
-body {
-  margin: 0;
-  font-family: 'MuseoSansCyrl';
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0 0 10px;
-}
-
-@font-face {
-  font-family: 'MuseoSansCyrl';
-  src: url('../fonts/MuseoSansCyrl-500.eot');
-  src: local('☺'), url('../fonts/MuseoSansCyrl-500.woff') format('woff'), url('../fonts/MuseoSansCyrl-500.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-500.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'MuseoSansCyrl';
-  src: url('../fonts/MuseoSansCyrl-900.eot');
-  src: local('☺'), url('../fonts/MuseoSansCyrl-900.woff') format('woff'), url('../fonts/MuseoSansCyrl-900.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-900.svg') format('svg');
-  font-weight: 700;
-  font-style: normal;
-}
- 
- /*container*/
-  .container {
-    width: 100%;
-    max-width: 1160px;
-    margin: 0 auto;
-}
-
-  /*header*/
 .header {
-    width: 100%;
-    background-color: #66B5FF;
-    background-image: url(../images/headerback.svg);
-    background-size: cover;
-    background-position: bottom;
-    max-height: 100%;
-    height: 180px;
+  width: 100%;
+  background-color: #66B5FF;
+  background-image: url(../images/headerback.svg);
+  background-size: cover;
+  background-position: bottom;
+  max-height: 100%;
+  height: 180px;
+
+  display: flex;
+  margin-top: 71px;
+  justify-content: space-between;
 }
 
 .header-inner {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-logo {
-    margin-top: 25px;
-
-
+  margin-top: 25px;
 }
 
 .header-nav {
-    display: flex;
-    margin-top: 71px;
-    @include media("<=1200px") {
-      padding-right: 20px;
+  
+  @include media("<=1200px") {
+    padding-right: 20px;
+  }
+
+  @include media("<tablet") {
+    display: none;
+
+    &.active {
+      display: flex;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: #66b5ff;
+      z-index: 1;
+
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: space-between;
+      align-items: center;
+
+      .header-link {
+        padding: 20px;
+      }
+
     }
   }
+}
 
 .header-link {
-    font-family: 'MuseoSansCyrl';
-    color: #ffffff;
-    text-transform: uppercase;
-    margin-left: 35px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    text-decoration: none;
+  font-family: 'MuseoSansCyrl';
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-left: 35px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
 }
 
-.header-burger {
-  display: none;
-  @include media("<=tablet") {
-    display: block;
-    position: relative;
-    width: 40px;
-    height: 30px;
+.burger-button {
+  display: block;
+  padding: 10px;
+  margin: 20px 40px 0 0;
+  
+  @include media(">tablet") {
+    display: none;
   }
-}
 
-.header-burger span {
-  position: absolute;
-  background-color: #ffffff;
-  width: 100%;
-  height: 3px;
-  left: 0;
-  top: 13px;
-}
+  @include media("<tablet") {
+    &.active {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      z-index: 2;
+    }
+  }
+  
+  .line {
+    height: 5px;
+    width: 40px;
+    margin-bottom: 7px;
+    background: white;
+    transition: all 300ms ease-in-out;
+    opacity: 1;
+  }
 
-.header-burger::before,
-.header-burger::after {
-  content: "";
-  position: absolute;
-  background-color: #ffffff;
-  width: 100%;
-  height: 3px;
-  left: 0;
-}
-
-.header-burger::before {
-  top: 0;
-}
-
-.header-burger::after {
-  bottom: 0;
+  &.active {
+    .line {
+      &.one {
+        transform: rotate(45deg) scale(1.2);
+      }
+      &.two {
+        transform: rotate(-45deg) scale(1.2) translateY(-7px) translateX(7px);
+      }
+      &.three {
+        opacity: 0;
+      }
+    } 
+  }
+  
 }
 
 /* Progress bar */

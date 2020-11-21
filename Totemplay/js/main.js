@@ -14,9 +14,18 @@ function checkProgress() {
     progressBar.style.width = progress + "%";
 }
 
+function initHamburger() {
+    const activeClass = 'active';
+    const $button = $('.burger-button');
+    const $navItems = $('.header-nav');
+    $button.click(() => {
+        [$button, $navItems].forEach((item) => item.toggleClass(activeClass));
+    })
+}
 
 $(document).ready(function() {
     initAccordion();
+    initHamburger();
     checkProgress();
 });
 
