@@ -28,8 +28,25 @@
   font-size: 80px;
   font-weight: 700;
   line-height: 120%;
-  @include media("<desktop-full") {
+
+  @include media(">=1200px") {
     font-size: 100px;
+    color: red;
+  }
+
+  @include media("<desktop") {
+    font-size: 80px;
+    color: green;
+  }
+
+  @include media("<=tablet") {
+    font-size: 60px;
+    color: cyan;
+  }
+
+  @include media("<=phone") {
+    font-size: 40px;
+    color: blue;
   }
 }
 
