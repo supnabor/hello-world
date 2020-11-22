@@ -8,17 +8,43 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 118px;
+  @include media("<=tablet") {
+    flex-wrap: wrap;
+  }
 }
 
 .info-left {
   flex:0 1 auto;
   width: 615px;
   height: 540px;
+  @include media("<=tablet") {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: 400px;
+  }
+  @include media("<=414px") {
+    height: 370px;
+    
+  }
 }
-
 .info-text {
   font-size: 30px;
   line-height: 150%;
+  @include media("<desktop") {
+    font-size: 24px;
+    
+  }
+
+  @include media("<=tablet") {
+    font-size: 24px;
+    
+  }
+
+  @include media("<=414px") {
+    font-size: 18px;
+    
+  }
 }
 
 .info-text span {
@@ -30,9 +56,26 @@
   margin-bottom: 50px;
 }
 
+.info-text p:last-child {
+  margin-bottom: 0;
+}
+
+.info-right {
+  display: block;
+  @include media("<=tablet") {
+    margin: 0 auto;
+  }
+  @include media("<=414px") {
+   
+  }
+}
+
 .info-img {
   color:greenyellow;
   position: relative;
+  img {
+    max-width: 100%;
+  }
 }
 
 .info-logo {

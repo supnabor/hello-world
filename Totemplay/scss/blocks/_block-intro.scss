@@ -12,6 +12,9 @@
 .intro-inner {
   display: flex;
   justify-content: space-between;
+  @include media("<=414px") {
+    flex-direction: column-reverse;
+  }
 
 }
 
@@ -31,22 +34,21 @@
 
   @include media("<=1200px") {
     font-size: 80px;
-    
   }
 
   @include media("<desktop") {
     font-size: 80px;
-    
   }
 
   @include media("<=tablet") {
     font-size: 60px;
-    
   }
 
-  @include media("<=phone") {
-    font-size: 40px;
-    
+  @include media("<=414px") {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 260px;
+    padding-left: 0;
   }
 }
 
@@ -59,7 +61,7 @@
   margin-bottom: 80px;
   @include media("<=1200px") {
     font-size: 24px;
-    
+    line-height: 20px;
   }
 
   @include media("<desktop") {
@@ -72,7 +74,7 @@
     
   }
 
-  @include media("<=phone") {
+  @include media("<=414px") {
     font-size: 18px;
     
   }
@@ -127,9 +129,20 @@
   width: 100%;
   height: 100%;
   position: absolute;
+  @include media ("<=414px") {
+    top: 85px;
+    left: 60px;
+  }
+  @include media ("<=375px") {
+    left: 50px;
+  }
   
   img {
     max-width: 100%;
     padding-left: 20px;
+  }
+  @include media("<=414px") {
+    max-width: 270px;
+    
   }
 }

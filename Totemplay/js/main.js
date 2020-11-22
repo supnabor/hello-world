@@ -1,11 +1,13 @@
 var widgetScrollTop = document.querySelector('.widget-scroll-top');
 
+//accordion
 function initAccordion() {
     $('.accordion-item-trigger').click(function(){
         $(this).parent().toggleClass('is-active');
     });
 }
 
+//progress bar
 function checkProgress() {
     var progressBar = document.querySelector('.progress-bar');
     var position = document.documentElement.scrollTop;
@@ -14,6 +16,7 @@ function checkProgress() {
     progressBar.style.width = progress + "%";
 }
 
+//burger menu
 function initHamburger() {
     const activeClass = 'active';
     const $button = $('.burger-button');
@@ -29,6 +32,7 @@ $(document).ready(function() {
     checkProgress();
 });
 
+//scroll-top button
 document.addEventListener('scroll', function() {
     checkProgress();
 

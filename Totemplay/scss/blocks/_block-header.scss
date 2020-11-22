@@ -6,9 +6,7 @@
   background-position: bottom;
   max-height: 100%;
   height: 180px;
-
   display: flex;
-  margin-top: 71px;
   justify-content: space-between;
 }
 
@@ -21,15 +19,27 @@
 
 .header-logo {
   margin-top: 25px;
+  @include media("<=414px") {
+    display: block;
+    width: 100%;
+  }
+  img {
+    @include media("<=414px") {
+      display: block;
+      margin: 15px auto;
+      max-width: 200px;
+    }
+  }
 }
 
 .header-nav {
+  padding-top: 40px;
   
   @include media("<=1200px") {
     padding-right: 20px;
   }
 
-  @include media("<tablet") {
+  @include media("<=tablet") {
     display: none;
 
     &.active {
@@ -42,7 +52,7 @@
       bottom: 0;
       right: 0;
       background: #66b5ff;
-      z-index: 1;
+      z-index: 10;
 
       display: flex;
       flex-direction: column;
@@ -71,30 +81,34 @@
 }
 
 .burger-button {
-  display: block;
-  padding: 10px;
-  margin: 20px 40px 0 0;
+  display: none;
   
-  @include media(">tablet") {
-    display: none;
+  
+  @include media("<=tablet") {
+    display: block;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    z-index: 200;
   }
 
-  @include media("<tablet") {
+  @include media("<=tablet") {
     &.active {
       position: fixed;
-      top: 30px;
-      right: 30px;
-      z-index: 2;
+      top: 60px;
+      right: 20px;
+      z-index: 200;
     }
   }
   
   .line {
-    height: 5px;
+    height: 6px;
     width: 40px;
     margin-bottom: 7px;
     background: white;
-    transition: all 300ms ease-in-out;
+    transition: all 200ms ease-in-out;
     opacity: 1;
+    border: 1px #FF7C2E solid;
   }
 
   &.active {

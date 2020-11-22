@@ -1,7 +1,7 @@
 /*salary*/
 .salary {
     width: 100%;
-    height: 985px;
+    height: 100%;
     position: relative;
    
   }
@@ -22,6 +22,9 @@
   .salary-background-img {
     max-width: 100%;
     position: absolute;
+    @include media("<=414px") {
+      transform: rotate(90deg);
+  }
   }
   
   .salary-inner {
@@ -37,11 +40,47 @@
   .arrow-1 {
     top: 340px;
     left: 290px;
+    @include media("<=1200px") {
+      top: 220px;
+      left: 320px;
+    }
+    @include media("<=desktop") {
+      width: 100px;
+      top: 160px;
+      left: 370px;
+    }
+    @include media("<=tablet") {
+      width: 80px;
+      top: 145px;
+      left: 270px;
+    }
+    @include media("<=414px") {
+      transform: rotate(90deg);
+      top: 160px;
+    }
   }
   
   .arrow-2 {
     top: 730px;
     left: 677px;
+    @include media("<=1200px") {
+      top: 450px;
+    }
+    @include media("<=desktop") {
+      width: 100px;
+      top: 400px;
+      left: 570px;
+    }
+    @include media("<=tablet") {
+      width: 80px;
+      top: 300px;
+      left: 420px;
+    }
+    @include media ("<=414px") {
+      left: 60px;
+      transform: rotate(90deg);
+      top: 270px;
+    }
   }
   
   .salary-header {
@@ -50,7 +89,17 @@
     max-width: 864px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 236px;
+    @include media("<=desktop") {
+      padding-top: 100px;
+    }
+    @include media("<=tablet") {
+      padding-top: 60px;
+      max-width: 400px;
+    }
+    @include media("<=414px") {
+      max-width: 200px;
+      padding-top: 30px;
+    }
   }
   
   .salary-title {
@@ -59,12 +108,41 @@
     line-height: 120%;
     text-transform: uppercase;
     color: #FF7C2E;
+    @include media("<=1200px") {
+      font-size: 40px;
+    }
+    @include media("<=desktop") {
+      font-size: 36px;
+    }
+    @include media("<=tablet") {
+      font-size: 32px;
+    }
+    @include media("<=414px") {
+      font-size: 22px;
+    }
   }
   
   .salary-block {
     display: flex;
     width: 100%;
     max-width: 1160px;
+    padding-top: 236px;
+    @include media("<=1200px") {
+      padding-top: 80px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    @include media("<=desktop") {
+      padding-top: 60px;
+      max-width: 600px;
+    }
+    @include media("<=tablet") {
+      padding-top: 40px;
+      max-width: 400px;
+    }
+    @include media("<=414px") {
+      flex-direction: column;
+    }
   }
   
   .salary-col {
@@ -74,6 +152,22 @@
     align-items: center;
     text-align: center;
     border-right: 3px solid rgba(0, 112, 218, 0.5);
+    @include media("<=1200px") {
+      height: 200px;
+    }
+    @include media("<=desktop") {
+      
+    }
+    @include media("<=tablet") {
+      height: 130px;
+    }
+    @include media ("<=414px") {
+      border-right: none;
+      width: 200px;
+      display: block;
+      margin: 0 auto;
+      height: 100px;
+    }
   }
   
   .salary-col:last-child {
@@ -85,6 +179,23 @@
     line-height: 36px;
     padding: 50px 0 40px;
     border-bottom: 3px solid rgba(0, 112, 218, 0.5);
+    @include media("<=1200px") {
+      font-size: 30px;
+      line-height: 20px;
+      padding: 40px 0 25px;
+    }
+    @include media("<=desktop") {
+      font-size: 26px;
+      line-height: 20px;
+      padding: 30px 10px 20px;
+    }
+    @include media("<=tablet") {
+      font-size: 20px;
+      padding: 10px 10px 5px;
+    }
+    @include media ("<=414px") {
+      padding-bottom: 0;
+    }
   }
   
   .salary-sum {
@@ -92,5 +203,19 @@
     line-height: 120%;
     padding-top: 29px;
     color: #E34E1A;
+    @include media("<=1200px") {
+      font-size: 32px;
+      line-height: 20px;
+    }
+    @include media("<=desktop") {
+      font-size: 28px;
+    }
+    @include media("<=tablet") {
+      padding-top: 20px;
+      font-size: 20px;
+    }
+    @include media ("<=414px") {
+      
+    }
   }
   

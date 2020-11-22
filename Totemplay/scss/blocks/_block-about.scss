@@ -17,6 +17,12 @@
     padding-top: 250px;
     margin: 0 auto;
     text-align: center;
+    @include media("<=tablet") {
+      max-width: 500px;
+    }
+    @include media("<=414px") {
+      max-width: 250px;
+    }
   }
   
   .about-title {
@@ -26,33 +32,78 @@
     text-transform: uppercase;
     color: #FF7C2E;
     margin-bottom: 40px;
-  }
+    @include media("<=desktop") {
+      font-size: 40px;
+    }
+    @include media("<=414px") {
+      font-size: 32px;
+    }
+  } 
   
   .about-suptitle {
     font-weight: normal;
     font-size: 30px;
     line-height: 150%;
+    @include media("<=desktop") {
+      font-size: 26px;
+    }
+    @include media("<=tablet") {
+      font-size: 24px;
+    }
+    @include media("<=414px") {
+      font-size: 20px;
+    }
   }
   
   .about-columns {
     display: flex;
     justify-content: space-between;
-  
+    @include media("<=tablet") {
+      flex-wrap: wrap;
+    }
   }
   
   .about-left {
     padding-top: 117px;
-    position: relative;
+    width: 100%;
+    @include media("<=tablet") {
+      padding-top: 30px;
+    }
   }
   
   .about-img {
-    position: absolute;
-    left:-245px;
+    margin-left: -245px;
+    @include media("<=tablet") {
+      display: block;
+      margin: 0 auto;
+      max-width: 500px;
+    }
+    @include media("<=414px") {
+      max-width: 320px;
+    }
   }
   
   .about-right {
-    width: 472px;
+    width: 70%;
     padding-top: 100px;
+    @include media("<=tablet") {
+      width: 100%;
+    }
+    @include media("<=414px") {
+      padding-top: 70px;
+    }
+  }
+
+  .about-text {
+    width: 100%;
+    @include media("<=tablet") {
+     width: 450px;
+     display: block;
+     margin: 0 auto;
+    }
+    @include media("<=414px") {
+      width: 300px;
+    }
   }
   
   h3 {
@@ -62,12 +113,28 @@
     text-transform: uppercase;
     color: #FF7C2E;
     margin-bottom: 10px;
+    @include media("<=desktop") {
+      font-size: 26px;
+    }
+    @include media("<=tablet") {
+      display: block;
+      margin: 0 auto;
+    }
+    @include media("<=414px") {
+      font-size: 20px;
+    }
   }
   
   .about-right p {
     margin-bottom: 40px;
     font-size: 24px;
     line-height: 150%;
+    @include media("<=desktop") {
+      font-size: 20px;
+    }
+    @include media("<=414px") {
+      font-size: 18px;
+    }
   }
   
   .about-right p:last-child {
