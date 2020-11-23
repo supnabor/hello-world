@@ -21,12 +21,31 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 125px;
+    @include media("<=1200px") {
+      font-size: 40px;
+    }
+    @include media("<=tablet") {
+      margin-bottom: 30px;
+    }
+    @include media("<=414px") {
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
   }
   
   .modules-inner {
     display: flex;
     justify-content: space-between;
     margin-bottom: 41px;
+    @include media("<=1200px") {
+      justify-content: space-around;
+    }
+    @include media("<=tablet") {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
   }
   
   .modules-item {
@@ -36,11 +55,31 @@
     position: relative;
     height: 100%;
     height: 635px;
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     border: 2px solid #fff;
     box-sizing: border-box;
     border-radius: 20px;
     text-align: center;
+    @include media("<=1200px") {
+      max-width: 340px;
+    }
+    @include media("<=desktop") {
+      max-width: 300px;
+      height: 600px;
+    }
+    @include media("<=tablet") {
+      max-width: 660px;
+      margin-bottom: 30px;
+      height: 340px;
+      text-align: left;
+    }
+    @include media("<=414px") {
+      max-width: 320px;
+      height: 600px;
+      justify-content: space-between;
+      text-align: center;
+    }
   }
   
   .modules-item-image {
@@ -48,6 +87,12 @@
     top: -50%;
     left: 50%;
     transform: translate(-50%, 60%);
+    @include media("<=tablet") {
+      transform: translate(15%, 60%);
+    }
+    @include media("<=414px") {
+      transform: translate(-50%, 125%);
+    }
   }
   
   .modules-item-title {
@@ -56,6 +101,10 @@
     font-size: 30px;
     line-height: 120%;
     color: #FFFFFF;
+    @include media("<=tablet") {
+      padding-top: 30px;
+      padding-left: 30px;
+    }
   }
   
   .modules-item-list {
@@ -65,6 +114,12 @@
     line-height: 150%;
     color: #FFFFFF;
     text-align: left;
+    @include media("<=desktop") {
+      padding-left: 30px;
+    }
+    @include media("<=414px") {
+      padding-bottom: 30px;
+    }
   }
   
   .modules-btn {
@@ -81,6 +136,14 @@
     border-radius: 10px;
     cursor: pointer;
     padding: 21px 83px;
+    @include media("<=414px") {
+      width: 300px;
+      line-height: 20px;
+      font-size: 16px;
+      max-height: 54px;
+      padding: 17px 33px;
+      text-align: center;
+    }
   }
   
   .modules-btn:hover {

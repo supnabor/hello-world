@@ -12,21 +12,53 @@
   
   .subscribe-content {
     display: flex;
-  
+    @include media("<=414px") {
+      flex-direction: column-reverse;
+    }
   }
   
   .subscribe-text {
-    width: 550px;
+    width: 100%;
+    max-width: 550px;
     padding-top: 379px;
     font-weight: bold;
     font-size: 50px;
     line-height: 120%;
     color: #FFFFFF;
+    @include media("<=1200px") {
+      text-align: center;
+    }
+    @include media("<=desktop") {
+      font-size: 40px;
+      padding-left: 40px;
+      text-align: left;
+    }
+    @include media("<=tablet") {
+      font-size: 32px;
+      max-width: 350px;
+      padding-top: 300px;
+      padding-left: 50px;
+    }
+    @include media("<=414px") {
+      text-align: center;
+      font-size: 28px;
+      padding-top: 350px;
+      max-width: 250px;
+      display: block;
+      margin: 0 auto;
+      padding-left: 0;
+    }
   }
   
   .subscribe-image {
     position: relative;
-    width: 50%;
+    width: 70%;
+    @include media("<=tablet") {
+      width: 50%;
+    }
+    @include media("<=414px") {
+      width: 70%;
+    }
   }
   
   .subscribe-anim {
@@ -35,9 +67,14 @@
     animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-timing-function: ease-in-out;
     right: 0;
     top: 200px;
     width: 100%;
+    @include media("<=414px") {
+      top: 50px;
+      right: -50px;
+    }
   }
   
   @keyframes subscribe-anim {
@@ -53,10 +90,27 @@
     padding-top: 151px;
     display: flex;
     justify-content: space-between;
+    @include media("<=desktop") {
+      justify-content: space-around;
+      padding-top: 175px;
+    }
+    @include media("<=tablet") {
+      flex-direction: column;
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+    @include media("<=414px") {
+      max-width: 300px;
+      padding-top: 80px;
+    }
   }
   
   .subscribe-input input {
-    width: 260px;
+    width: 100%;
+    max-width: 260px;
     height: 65px;
     border: 3px solid #FFFFFF;
     color: rgba(255, 255, 255, 0.6);
@@ -64,6 +118,19 @@
     font-size: 20px;
     line-height: 24px;
     padding-left: 30px;
+    @include media("<=desktop") {
+      max-width: 220px;
+      height: 54px;
+    }
+    @include media("<=tablet") {
+      max-width: 100%;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    @include media("<=414px") {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
   }
   
   
@@ -77,4 +144,17 @@
     border-radius: 10px;
     cursor: pointer;
     padding: 20px 33px;
+    @include media("<=desktop") {
+      font-size: 18px;
+      line-height: 20px;
+      padding: 17px 33px;
+    }
+    @include media("<=tablet") {
+      width: 600px;
+      max-height: 54px;
+    }
+    @include media("<=414px") {
+      font-size: 16px;
+      width: 300px;
+    }
   }

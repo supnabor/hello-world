@@ -8,12 +8,30 @@
   
   .footer-inner {
     padding-top: 498px;
+    @include media("<=tablet") {
+      padding-top: 400px;
+    }
   }
   
   .footer-logo {
+    display: block;
     width: 100%;
     text-align: center;
-    margin-bottom: 92px;
+    margin: 0 auto 92px;
+    @include media("<=tablet") {
+      margin-bottom: 80px;
+    }
+    @include media("<=414px") {
+      margin-bottom: 40px;
+    }
+    img {
+      @include media("<=tablet"){
+        max-width: 300px;
+      }
+      @include media("<=414px") {
+        max-width: 200px;
+      }
+    }
   }
   
   .footer-contacts {
@@ -21,6 +39,9 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 59px;
+    @include media("<=414px") {
+      margin-bottom: 30px;
+    }
   }
   
   .footer-contacts a {
@@ -30,6 +51,10 @@
     color: #FFFFFF;
     text-decoration: none;
     margin-bottom: 16px;
+    @include media("<=414px") {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
   }
   
   .footer-icons {
@@ -40,6 +65,9 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 100px;
+    @include media("<=414px") {
+      max-width: 180px;
+    }
   }
   
   .footer-icons-link {
@@ -52,6 +80,11 @@
     text-decoration: none;
     padding-top: 13px;
     text-align: center;
+    @include media("<=414px") {
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+    }
   }
 
   /*scroll-top*/

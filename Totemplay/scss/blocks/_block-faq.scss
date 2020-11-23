@@ -14,12 +14,37 @@
     margin: 0 auto;
     text-align: center;
     margin-bottom: 100px;
+    @include media("<=desktop") {
+      font-size: 40px;
+      margin-bottom: 80px;
+    }
+    @include media("<=tablet") {
+      margin-bottom: 60px;
+    }
+    @include media("<=414px") {
+      font-size: 34px;
+    }
   }
   
   .accordion-item {
+    width: 100%;
     margin-bottom: 10px;
     background: #66B5FF;
     padding: 40px 40px 40px 36px;
+    @include media("<=1200px") {
+      max-width: 1060px;
+      margin: 0 auto 10px;
+    }
+    @include media("<=desktop") {
+      max-width: 860px;
+    }
+    @include media("<=tablet") {
+      max-width: 660px;
+    }
+    @include media("<=414px") {
+      margin-bottom: 5px;
+      max-width: 400px;
+    }
   }
   
   .accordion-item-trigger {
@@ -30,6 +55,10 @@
     line-height: 120%;
     cursor: pointer;
     position: relative;
+    @include media("<=414px") {
+      font-size: 20px;
+      width: 250px;
+    }
   }
   
   .accordion-item-trigger-icon {
@@ -41,6 +70,9 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
+    @include media("<=414px") {
+      right: -60px;
+    }
   }
   
   .accordion-item-content {
@@ -52,6 +84,12 @@
     transition: all 600ms ease-in-out;
     max-height: 0;
     opacity: 0;
+    @include media("<=tablet") {
+      font-size: 18px;
+    }
+    @include media("<=414px") {
+      font-size: 16px;
+    }
   }
   
   .accordion-item.is-active .accordion-item-content {

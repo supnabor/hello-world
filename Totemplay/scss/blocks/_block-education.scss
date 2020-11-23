@@ -5,11 +5,10 @@
     background-image: url(../images/educationback.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 106px;
-  }
-  
-  .education-inner {
-  
+    
+    @include media("<=tablet") {
+      height: 700px;
+    }
   }
   
   .education-header {
@@ -18,6 +17,16 @@
     margin: 0 auto;
     text-align: center;
     margin-bottom: 91px;
+    @include media("<=desktop") {
+      margin-bottom: 80px;
+    }
+    @include media("<=tablet") {
+      
+      margin-bottom: 50px;
+    }
+    @include media("<=414px") {
+
+    }
   }
   
   .education-title {
@@ -27,6 +36,19 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 55px;
+    @include media("<=1200px") {
+      font-size: 40px;
+    }
+    @include media("<=desktop") {
+      margin-bottom: 45px;
+    }
+    @include media("<=tablet") {
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+    @include media("<=414px") {
+      font-size: 26px;
+    }
   }
   
   .education-subtitle {
@@ -38,6 +60,16 @@
     line-height: 120%;
     color: #FFFFFF;
     text-align: center;
+    @include media("<=1200px") {
+      font-size: 26px;
+    }
+    @include media("<=tablet") {
+      font-size: 22px;
+    }
+    @include media("<=414px") {
+      font-size: 18px;
+      max-width: 300px;
+    }
   }
   
   .education-form {
@@ -56,17 +88,41 @@
     line-height: 24px;
     padding-left: 30px;
     margin-bottom: 27px;
+    @include media("<=desktop") {
+      width: 700px;
+    }
+    @include media("<=tablet") {
+      width: 600px;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    @include media("<=414px") {
+      width: 300px;
+    }
   }
   
   .education-button button {
+    width: 760px;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
+    text-align: center;
     color: #FFFFFF;
     background: #0070DA;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    padding: 14px 285px;
+    height: 55px;
+    @include media("<=desktop") {
+      width: 700px;
+    }
+    @include media("<=tablet") {
+      width: 600px;
+      font-size: 24px;
+    }
+    @include media("<=414px") {
+      width: 300px;
+      font-size: 20px;
+    }
   }
   

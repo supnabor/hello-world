@@ -112,6 +112,10 @@
   text-decoration: none;
   transition: color 0.2s linear;
   transition: background-color 0.2s linear;
+  @include media("<414px") {
+      font-size: 24px;
+      width: 300px;
+  }
 }
 
 .intro-btn:hover {
