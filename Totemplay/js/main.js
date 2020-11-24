@@ -1,3 +1,4 @@
+// Anchor Scrolling
 function initAnchorScrolling() {
     $('a[href*="#"]')
     // Remove links that don't actually link to anything
@@ -37,7 +38,7 @@ function initAnchorScrolling() {
 }
 
 
-//accordion
+// Accordion
 function initAccordion() {
     $('.accordion-item-trigger').click(function(){
         $(this).parent().toggleClass('is-active');
@@ -56,18 +57,10 @@ function initScrollProgressBar() {
 
     checkProgress();
 
-    document.addEventListener('scroll', function() {
-        checkProgress();
-
-        if (window.pageYOffset > 1250) {
-            $(widgetScrollTop).addClass('is-visible');
-        } else {
-            $(widgetScrollTop).removeClass('is-visible');
-        }
-    });
+    document.addEventListener('scroll', checkProgress);
 }
 
-//burger menu
+// Burger Menu
 function initHamburger() {
     const activeClass = 'active';
     const $button = $('.burger-button');
@@ -82,12 +75,21 @@ function initHamburger() {
     $navItems.click(toggleActiveClass);
 }
 
+// Scroll Top Button
 function initScrollTopButton() {
     var widgetScrollTop = document.querySelector('.widget-scroll-top');
+
     widgetScrollTop.addEventListener('click', function(event) {
         event.preventDefault();
-
         $("html, body").animate({ scrollTop: 0}, 300);
+    });
+
+    document.addEventListener('scroll', function() {
+        if (window.pageYOffset > 1250) {
+            $(widgetScrollTop).addClass('is-visible');
+        } else {
+            $(widgetScrollTop).removeClass('is-visible');
+        }
     });
 }
 
