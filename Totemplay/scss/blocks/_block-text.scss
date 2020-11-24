@@ -38,6 +38,10 @@
     &-4 {
       top: 452px;
       left: 399px;
+      animation-name: rotate , zoom;
+      animation-duration: 5s , 4s;
+      animation-timing-function: linear , linear;
+      animation-iteration-count: infinite , infinite;
     }
     
     &-5 {
@@ -60,6 +64,9 @@
     &-8 {
       top: 140px;
       left: 996px;
+      animation: rotate 6s linear infinite;
+      width: 140px;
+      height: 140px;
     }
     
     &-9 {
@@ -92,6 +99,7 @@
     &-14 {
       top: 720px;
       left: 1172px;
+      animation: zoom 5s linear infinite;
     }
   }
   
@@ -100,6 +108,17 @@
       transform: rotate(360deg);
     }
   }
+  @keyframes zoom {
+    0% {
+      transform: scale(1, 1)
+    }
+    50% {
+      transform: scale(1.5, 1.5)
+    }
+    100% {
+      transform: scale(1, 1)
+    }
+}
 }
   
 .text-inner {
