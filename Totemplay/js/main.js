@@ -7,8 +7,8 @@ function initAnchorScrolling() {
     .click(function(event) {
         // On-page links
         if (
-            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-            && 
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
             location.hostname == this.hostname
         ) {
         // Figure out element to scroll to
@@ -70,7 +70,7 @@ function initHamburger() {
     function toggleActiveClass() {
         [$button, $navContainer].forEach((item) => item.toggleClass(activeClass));
     }
-    
+
     $button.click(toggleActiveClass);
     $navItems.click(toggleActiveClass);
 }
@@ -93,10 +93,49 @@ function initScrollTopButton() {
     });
 }
 
+function isInViewport(el) {
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top < window.innerHeight && rect.bottom >= 0
+    );
+}
+
+function initParallax() {
+    var offset = 0;
+    var scrollPos = 0;
+    var footer = document.querySelector('.footer');
+    var topScene = footer.querySelector('.parallax-scene-top');
+    var bottomScene = footer.querySelector('.parallax-scene-bottom');
+
+    window.addEventListener('scroll', function() {
+        if (isInViewport(footer)) {
+            if (document.body.getBoundingClientRect().top > scrollPos) {
+                offset -- ;
+                offset = offset - 3;
+            }
+            else {
+                offset ++ ;
+                offset = offset + 3;
+            }
+            scrollPos = document.body.getBoundingClientRect().top;
+
+            topScene.style.transform = `translateY(${(offset * -1)}px)`;
+            bottomScene.style.transform = `translateY(${offset}px)`;
+        } else {
+            offset = 0;
+            topScene.style.transform = `translateY(0px)`;
+            bottomScene.style.transform = `translateY(${offset}px)`;
+        }
+    });
+}
+
+
 $(document).ready(function() {
     initAccordion();
     initHamburger();
     initAnchorScrolling();
     initScrollProgressBar();
-    initScrollTopButton()
+    initScrollTopButton();
+    initParallax();
 });

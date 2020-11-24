@@ -1,18 +1,19 @@
 /*footer*/
 .footer {
-    background-image: url(../images/footerback2.svg) , url(../images/footerback1.svg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
+  background-image: url(../images/footerback2.svg) , url(../images/footerback1.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+
   .footer-inner {
     padding-top: 498px;
     @include media("<=tablet") {
       padding-top: 400px;
     }
   }
-  
+
   .footer-logo {
     display: block;
     width: 100%;
@@ -33,7 +34,7 @@
       }
     }
   }
-  
+
   .footer-contacts {
     display: flex;
     flex-direction: column;
@@ -43,7 +44,7 @@
       margin-bottom: 30px;
     }
   }
-  
+
   .footer-contacts a {
     font-weight: 700;
     font-size: 24px;
@@ -56,7 +57,7 @@
       font-size: 20px;
     }
   }
-  
+
   .footer-icons {
     width: 100%;
     max-width: 213px;
@@ -69,7 +70,7 @@
       max-width: 180px;
     }
   }
-  
+
   .footer-icons-link {
     width: 55px;
     height: 55px;
@@ -87,27 +88,31 @@
     }
   }
 
-  /*scroll-top*/
-.widget-scroll-top {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 9999;
-    background-color: red;
-    border-radius: 10px;
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    padding-top: 9px;
-    width: 50px;
-    height: 50px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.15s linear;
-    cursor: pointer;
+  .image-parallax {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
   }
-  
-  .widget-scroll-top.is-visible {
-    opacity: 1;
-    visibility: visible;
+
+  .parallax-scene-bottom,
+  .parallax-scene-top {
+    position: absolute;
+    bottom: 150px;
+    left: 50px;
+    width: 300px;
+    height: 300px;
+    transition: transform 0.25ms ease-in-out;
+
+    img {
+      max-width: 100%;
+    }
   }
+
+  .parallax-scene-top {
+    top: 150px;
+    right: 50px;
+    bottom: auto;
+    left: auto;
+  }
+}
