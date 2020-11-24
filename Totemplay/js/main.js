@@ -133,6 +133,40 @@ function initParallax() {
     });
 }
 
+// Universal Parallax Handler
+function initParralaxAt(selector, multiplier = 1) {
+    let offset = 0;
+    let prevScrollPosition = 0;
+    const element = document.querySelector(selector);
+    const parallaxUp = element.querySelectorAll('.parallax-up');
+    const parallaxDown = element.querySelectorAll('.parallax-down');
+
+    function setTranslateY(value) {
+        return (element) => {
+            element.style.transform = `translateY(${value}px)`;
+        }
+    }
+
+    window.addEventListener('scroll', function() {
+        if (isInViewport(element)) {
+            const bodyBoundingClientRect = document.body.getBoundingClientRect();
+            const isScrollingUp = bodyBoundingClientRect.top > prevScrollPosition;
+            
+            offset = isScrollingUp ? offset - multiplier : offset + multiplier;
+            prevScrollPosition = bodyBoundingClientRect.top;
+    
+            parallaxUp && (parallaxUp.forEach(setTranslateY(offset * -1)));
+            parallaxDown && (parallaxDown.forEach(setTranslateY(offset)));
+        } else {
+            offset = 0;
+            prevScrollPosition = 0;
+
+            parallaxUp && (parallaxUp.forEach(setTranslateY(offset)));
+            parallaxDown && (parallaxDown.forEach(setTranslateY(offset)));
+        }
+    });
+}
+
 
 $(document).ready(function() {
     initAccordion();
@@ -141,4 +175,9 @@ $(document).ready(function() {
     initScrollProgressBar();
     initScrollTopButton();
     initParallax();
+    // initParralaxAt('.footer', 4);
+    initParralaxAt('.info', 1.5);
+    initParralaxAt('.about', 4);
+    initParralaxAt('.education', 3.5);
+
 });

@@ -1,9 +1,21 @@
 /*info*/
 .info {
+  position: relative;
 
+  &-decoration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 .info-inner {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;

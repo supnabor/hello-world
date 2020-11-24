@@ -1,15 +1,28 @@
 /*education*/
 .education {
-    width: 100%;
-    height: 892px;
-    background-image: url(../images/educationback.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    @include media("<=tablet") {
-      height: 700px;
+  width: 100%;
+  height: 892px;
+  background-image: url(../images/educationback.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  @include media("<=tablet") {
+    height: 700px;
+  }
+
+  &-inner {
+    position: relative;
+  }
+
+  &-decoration-left {
+    position: absolute;
+    left: -150px;
+    top: 300px;
+    img {
+      width: 300px;
     }
   }
+}
   
   .education-header {
     padding-top: 150px;

@@ -1,15 +1,34 @@
 /*about*/
 .about {
-    width: 100%;
-    height: 1440px;
-    background-image: url(../images/aboutback.jpg);
-    background-repeat: no-repeat;
-    background-position-y: -280px;
-  }
-  
-  .about-inner {
+  width: 100%;
+  height: 1440px;
+  background-image: url(../images/aboutback.jpg);
+  background-repeat: no-repeat;
+  background-position-y: -280px;
+
+  &-inner {
     margin-bottom: 250px;
+    position: relative;
   }
+
+  &-decoration-left {
+    position: absolute;
+    left: -175px;
+    top: 600px;
+    img {
+      width: 300px;
+    }
+  }
+
+  &-decoration-right {
+    position: absolute;
+    right: -175px;
+    bottom: -300px;
+    img {
+      width: 300px;
+    }
+  }
+}
   
   .about-header {
     width: 100%;
