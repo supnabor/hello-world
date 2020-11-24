@@ -48,10 +48,10 @@ function initAccordion() {
 
 function initScrollProgressBar() {
     function checkProgress() {
-        var progressBar = document.querySelector('.progress-bar');
-        var position = document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var progress = (position / height) * 100;
+        const progressBar = document.querySelector('.progress-bar');
+        const position = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = (position / height) * 100;
         progressBar.style.width = progress + "%";
     }
 
@@ -77,7 +77,7 @@ function initHamburger() {
 
 // Scroll Top Button
 function initScrollTopButton() {
-    var widgetScrollTop = document.querySelector('.widget-scroll-top');
+    const widgetScrollTop = document.querySelector('.widget-scroll-top');
 
     widgetScrollTop.addEventListener('click', function(event) {
         event.preventDefault();
@@ -93,6 +93,7 @@ function initScrollTopButton() {
     });
 }
 
+// Check if element entered viewport
 function isInViewport(el) {
     var rect = el.getBoundingClientRect();
 
@@ -101,14 +102,16 @@ function isInViewport(el) {
     );
 }
 
+// Footer parallax animation
 function initParallax() {
-    var offset = 0;
-    var scrollPos = 0;
-    var footer = document.querySelector('.footer');
-    var topScene = footer.querySelector('.parallax-scene-top');
-    var bottomScene = footer.querySelector('.parallax-scene-bottom');
+    let offset = 0;
+    let scrollPos = 0;
+    const footer = document.querySelector('.footer');
+    const topScene = footer.querySelector('.parallax-scene-top');
+    const bottomScene = footer.querySelector('.parallax-scene-bottom');
 
     window.addEventListener('scroll', function() {
+    // Check if footer entered viewport and define scroll direction
         if (isInViewport(footer)) {
             if (document.body.getBoundingClientRect().top > scrollPos) {
                 offset -- ;
@@ -125,7 +128,7 @@ function initParallax() {
         } else {
             offset = 0;
             topScene.style.transform = `translateY(0px)`;
-            bottomScene.style.transform = `translateY(${offset}px)`;
+            bottomScene.style.transform = `translateY(0px)`;
         }
     });
 }
