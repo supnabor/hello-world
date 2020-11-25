@@ -41,10 +41,10 @@
   .text-img {
     position: absolute;
     &-1 {
-      top: 163px;
-      left: 366px;
+      top: 153px;
+      left: 386px;
       animation-name: square;
-      animation-duration: 8s;
+      animation-duration: 10s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
     }
@@ -54,11 +54,19 @@
       left: 123px;
       width: 110px;
       height: 110px;
+      animation-name: cross;
+      animation-duration: 14s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
     
     &-3 {
-      top:258px;
+      top:278px;
       left: 267px;
+      animation-name: rotate;
+      animation-duration: 4s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
     
     &-4 {
@@ -73,11 +81,17 @@
     &-5 {
       top: 605px;
       left: 403px;
+      animation-name: cross;
+      animation-duration: 12s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
     
     &-6 {
       top: 594px;
       left: 604px;
+      width: 100px;
+      height: 100px;
       animation: rotate 3s linear infinite;
       animation-direction: reverse;
     }
@@ -102,6 +116,7 @@
     &-9 {
       top: 151px;
       left: 1610px;
+      animation: rotate 4s linear infinite;
     }
     
     &-10 {
@@ -118,6 +133,12 @@
     &-11 {
       top: 376px;
       left: 1586px;
+      width: 120px;
+      height: 120px;
+      animation-name: cross;
+      animation-duration: 12s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
     
     &-12 {
@@ -130,6 +151,10 @@
     &-13 {
       top: 588px;
       left: 1543px;
+      animation-name: cross;
+      animation-duration: 14s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
     
     &-14 {
@@ -160,6 +185,12 @@
     25% { transform:  translateX(130px) translateY(50px) rotate(50deg);}
     50% { transform:  translateY(100px);}
     75% { transform:  translateX(-50px) rotate(50deg);}
+}
+@keyframes cross {
+  0% { transform:  translate(0 ,0);}
+  25% { transform:  translateX(-80px) translateY(30px) rotate(45deg);}
+  50% { transform:  translateY(50px) rotate(45deg);}
+  
 }
 }
   
