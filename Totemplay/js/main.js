@@ -45,7 +45,7 @@ function initAccordion() {
     });
 }
 
-
+// Progress Bar
 function initScrollProgressBar() {
     function checkProgress() {
         const progressBar = document.querySelector('.progress-bar');
