@@ -2,9 +2,11 @@
 .about {
   width: 100%;
   height: 1440px;
-  background-image: url(../images/aboutback.jpg);
+  background-image: url(../images/aboutback.svg);
   background-repeat: no-repeat;
-  background-position-y: -280px;
+
+  background-position: center top;
+  background-size: cover;
 
   &-inner {
     margin-bottom: 250px;
