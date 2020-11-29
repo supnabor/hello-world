@@ -167,7 +167,7 @@ function initParralaxAt(selector, multiplier = 1) {
     });
 }
 
-//Smooth Animation
+//Smooth Animation on Scroll
 const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {

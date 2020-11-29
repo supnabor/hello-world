@@ -121,7 +121,7 @@
     max-width: 260px;
     height: 65px;
     border: 3px solid #FFFFFF;
-    color: rgba(255, 255, 255, 0.6);
+    color: #FFFFFF;
     background-color: #FF7C2E;
     font-size: 20px;
     line-height: 24px;
@@ -138,6 +138,9 @@
     @include media("<=414px") {
       font-size: 16px;
       margin-bottom: 15px;
+    }
+    ::placeholder {
+      color:  rgba(255, 255, 255, 0.6);
     }
   }
   
