@@ -16,6 +16,20 @@
   .background-container-inner {
     position: relative;
     left: -20%;
+    z-index: 0;
+
+
+    @include media("<=desktop") {
+      transform: translate(-25%);
+    }
+
+    @include media("<=tablet") {
+      transform: translate(-65%);
+    }
+
+    @include media("<=414px") {
+      transform: translate(-140%);
+    }
   }
 
   .text-anim {
@@ -27,10 +41,6 @@
       animation-duration: 7s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-
-      @include media("<=414px") {
-        top: 520px;
-      }
     }
     &-14 {
       top: 720px;
@@ -62,9 +72,6 @@
       animation-duration: 14s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      @include media("<=414px") {
-        left: 20px;
-      }
     }
     
     &-3 {
@@ -74,9 +81,6 @@
       animation-duration: 4s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      @include media("<=414px") {
-        top: 180px;
-      }
     }
     
     &-4 {
@@ -95,9 +99,6 @@
       animation-duration: 12s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      @include media("<=414px") {
-        left: 300px;
-      }
     }
     
     &-6 {
@@ -215,6 +216,9 @@
   font-size: 30px;
   line-height: 150%;
   text-align: center;
+  position: relative;
+  z-index: 1;
+
   @include media("<=tablet") {
     font-size: 26px;
     max-width: 600px;
