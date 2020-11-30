@@ -1,13 +1,25 @@
 /*modules*/
 .modules {
     width: 100%;
-    min-height: 1320px;
-    padding-top: 230px;
-    margin-top: -286px;
+   /* min-height: 1320px;*/
+    padding-top: 280px;
+    margin-top: -330px;
     background-image: url(../images/modulesback.svg);
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 100% 100%;
+    /*background-size: 100% 100%;*/
+    background-size: cover;
+    padding-bottom: 320px;
+    @include media("<=1200px") {
+      padding-top: 290px;
+      margin-top: -350px;
+    }
+    @include media("<=tablet") {
+      padding-top: 310px;
+    }
+    @include media("<=414px") {
+      margin-top: -260px;
+    }
   }
   
   .modules-header {
