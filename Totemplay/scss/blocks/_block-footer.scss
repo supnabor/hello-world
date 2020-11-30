@@ -107,6 +107,13 @@
     img {
       max-width: 100%;
     }
+    @include media ("<=tablet") {
+      left: -100px;
+    }
+    @include media ("<=414px") {
+      max-width: 50%;
+      left: -80px;
+    }
   }
 
   .parallax-scene-top {
@@ -114,5 +121,8 @@
     right: 50px;
     bottom: auto;
     left: auto;
+    @include media ("<=414px") {
+      right: -80px;
+    }
   }
 }

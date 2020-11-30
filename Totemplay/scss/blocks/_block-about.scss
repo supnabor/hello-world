@@ -29,6 +29,9 @@
     bottom: -300px;
     img {
       width: 300px;
+      @include media("<=414px") {
+        width: 60%;
+      }
     }
   }
 }

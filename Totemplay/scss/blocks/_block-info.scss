@@ -10,6 +10,9 @@
     img {
       display: block;
       width: 100%;
+      @include media("<=414px") {
+        width: 50%;
+      }
     }
   }
 }
@@ -22,6 +25,9 @@
   padding-top: 118px;
   @include media("<=tablet") {
     flex-wrap: wrap;
+  }
+  @include media("<=414px") {
+    padding-top: 80px;
   }
 }
 
@@ -63,7 +69,7 @@
 
   @include media("<=414px") {
     font-size: 18px;
-    
+    padding: 20px;
   }
 }
 
@@ -86,7 +92,10 @@
     margin: 0 auto;
   }
   @include media("<=414px") {
-   
+   padding-top: 50px;
+  }
+  @include media("<=320px") {
+    padding-top: 100px;
   }
 }
 

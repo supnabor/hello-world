@@ -18,8 +18,13 @@
     position: absolute;
     left: -150px;
     top: 300px;
+    width: 300px;
     img {
-      width: 300px;
+      width: 100%;
+    }
+    @include media("<=414px") {
+      width: 50%;
+      left: -130px;
     }
   }
 }
@@ -37,9 +42,7 @@
       
       margin-bottom: 50px;
     }
-    @include media("<=414px") {
-
-    }
+    
   }
   
   .education-title {
@@ -62,6 +65,9 @@
     @include media("<=414px") {
       font-size: 26px;
     }
+    @include media ("<=320px") {
+      font-size: 22px;
+    }
   }
   
   .education-subtitle {
@@ -82,6 +88,9 @@
     @include media("<=414px") {
       font-size: 18px;
       max-width: 300px;
+    }
+    @include media ("<=320px") {
+      font-size: 16px;
     }
   }
   
@@ -111,9 +120,6 @@
     }
     @include media("<=414px") {
       width: 300px;
-    }
-    ::placeholder {
-      color:  rgba(255, 255, 255, 0.6);
     }
   }
   

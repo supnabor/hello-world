@@ -45,6 +45,9 @@
       margin-bottom: 5px;
       max-width: 400px;
     }
+    @include media("<=320px") {
+     padding-left: 20px;
+  } 
   }
   
   .accordion-item-trigger {
@@ -72,6 +75,9 @@
     transform: translateY(-50%);
     @include media("<=414px") {
       right: -60px;
+    }
+    @include media("<=320px") {
+      right: -35px;
     }
   }
   
