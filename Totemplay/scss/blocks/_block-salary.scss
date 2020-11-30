@@ -29,13 +29,20 @@
         left: -10%;
         right: -5%;
       }
+
       @include media("<=desktop") {
         left: -15%;
         right: -10%;
       }
+
       @include media("<=tablet") {
-        background-size: cover;
+        left: -35%;
+        right: -30%;
         background-position: center center;
+      }
+
+      @include media("<=414px") {
+        background-size: cover;
       }
 
     }
@@ -119,6 +126,9 @@
     @include media("<=desktop") {
       font-size: 32px;
     }
+    @include media("<=tablet") {
+      font-size: 26px;
+    }
     @include media("<=414px") {
       font-size: 22px;
     }
@@ -187,16 +197,19 @@
     line-height: 36px;
     padding: 50px 0 40px;
     border-bottom: 3px solid rgba(0, 112, 218, 0.5);
+
     @include media("<=1200px") {
       font-size: 30px;
       line-height: 20px;
       padding: 40px 0 25px;
     }
+
     @include media("<=desktop") {
       font-size: 26px;
       line-height: 20px;
       padding: 30px 10px 20px;
     }
+    
     @include media("<=tablet") {
       font-size: 20px;
       padding: 10px 10px 5px;
