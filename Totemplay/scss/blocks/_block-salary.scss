@@ -170,6 +170,9 @@
     align-items: center;
     text-align: center;
     border-right: 3px solid rgba(0, 112, 218, 0.5);
+    &:last-of-type {
+      border-right: none;
+    }
     @include media("<=1200px") {
       height: 200px;
     }
@@ -186,10 +189,6 @@
       margin: 0 auto;
       height: 100px;
     }
-  }
-  
-  .salary-col:last-child {
-    border-right: none;
   }
   
   .salary-exp {
