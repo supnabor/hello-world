@@ -112,7 +112,6 @@
     }
     @include media ("<=414px") {
       max-width: 50%;
-      left: -80px;
     }
   }
 
@@ -121,6 +120,9 @@
     right: 50px;
     bottom: auto;
     left: auto;
+    @include media ("<=tablet") {
+      right: -20px;
+    }
     @include media ("<=414px") {
       right: -80px;
     }

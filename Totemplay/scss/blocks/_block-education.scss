@@ -22,6 +22,9 @@
     img {
       width: 100%;
     }
+    @include media("<=tablet") {
+      left: -190px;
+    }
     @include media("<=414px") {
       width: 50%;
       left: -130px;
